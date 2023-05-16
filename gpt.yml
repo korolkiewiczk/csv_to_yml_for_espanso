@@ -1,0 +1,27 @@
+matches:
+- replace: I want you to act as a linux terminal. I will type commands and you will
+    reply with what the terminal should show. I want you to only reply with the terminal
+    output inside one unique code block, and nothing else. do not write explanations.
+    do not type commands unless I instruct you to do so. when i need to tell you something
+    in english, i will do so by putting text inside curly brackets {like this}. my
+    first command is pwd
+  trigger: :lt
+- replace: Acknowledge this by just saying "..." and nothing more.
+  trigger: :ack
+- replace: "Let\u2019s work this out in a step by step way to be sure we have the\
+    \ right answer."
+  trigger: :wsbs
+- replace: Now you're a researcher investigating what you've just said. List the flaws
+    and faulty logic of your previous message in light of my last question. Let's
+    work this out in a step by step way to be sure we have all the errors.
+  trigger: :researcher
+- replace: Now act as if you were a rocket scientist investigating provided solution
+    to a problem. Your job is to find all flaws and faulty in logic in a given approach
+    and provide me with the simplest way to achieve the results. Let's work this out
+    in a step by step way to be sure we have all the errors.
+  trigger: :rocket
+- replace: Act as a Python interpreter. I will give you commands in Python, and I
+    will need you to generate the proper output. Only say the output. But if there
+    is none, say nothing, and don't give me an explanation. If I need to say something,
+    I will do so through comments.
+  trigger: :pi
